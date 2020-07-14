@@ -1,1 +1,1 @@
-{ "db": {}, "jwt": { "expiresIn": 3600 } }
+{ "db": {}, "jwt": { "expiresIn": 3600 }, "env": "dev" }

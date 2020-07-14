@@ -32,7 +32,8 @@
     "mongoose": "^5.9.23",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.0",
-    "rxjs": "^6.5.3"
+    "rxjs": "^6.5.3",
+    "signale": "^1.4.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^6.9.0",
@@ -75,7 +76,9 @@
       "@gypsy/bootstrap/(.*)": "<rootDir>/libs/bootstrap/src/$1",
       "@gypsy/bootstrap": "<rootDir>/libs/bootstrap/src",
       "@gypsy/config/(.*)": "<rootDir>/libs/config/src/$1",
-      "@gypsy/config": "<rootDir>/libs/config/src"
+      "@gypsy/config": "<rootDir>/libs/config/src",
+      "@gypsy/logger/(.*)": "<rootDir>/libs/logger/src/$1",
+      "@gypsy/logger": "<rootDir>/libs/logger/src"
     }
   }
 }

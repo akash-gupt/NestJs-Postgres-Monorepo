@@ -1,5 +1,6 @@
 {
   "db": {},
   "jwt": { "expiresIn": 3600 },
-  "server": { "ownerport": 3000, "userport": 3000 }
+  "server": { "ownerport": 3000, "userport": 3000 },
+  "env": "dev"
 }

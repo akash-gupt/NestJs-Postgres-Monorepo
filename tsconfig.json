@@ -22,6 +22,12 @@
       ],
       "@gypsy/config/*": [
         "libs/config/src/*"
+      ],
+      "@gypsy/logger": [
+        "libs/logger/src"
+      ],
+      "@gypsy/logger/*": [
+        "libs/logger/src/*"
       ]
     }
   },
