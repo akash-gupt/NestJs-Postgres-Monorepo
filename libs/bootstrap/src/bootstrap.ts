@@ -1,6 +1,5 @@
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
-import { handleValidationException } from './class-validator.exception';
 import { IBootstrapConfig } from './config/bootstrap.config';
 import { DEFAULT_BOOTSTRAP_CONFIG } from './config/bootstrap.default.config';
 import { configureSwagger } from './swagger';
@@ -8,8 +7,9 @@ import {
   FastifyAdapter,
   NestFastifyApplication,
 } from '@nestjs/platform-fastify';
+import { GypsyLogger } from '@gypsy/logger';
 
-const logger = new Logger('bootstrap');
+const logger = GypsyLogger.scope('bootstrap');
 
 export async function createNestApp(
   AppModule,
@@ -27,6 +27,7 @@ export async function createNestApp(
     AppModule,
     new FastifyAdapter({ logger: true }),
   );
+
   app.enableCors();
   app.setGlobalPrefix(globalPrefix);
   swagger ? configureSwagger(app) : logger.debug('swagger is disabled.');
@@ -40,7 +41,6 @@ export async function createNestApp(
       transformOptions: {
         enableImplicitConversion: true,
       },
-      exceptionFactory: handleValidationException,
     }),
   );
 

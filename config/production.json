@@ -1,5 +1,5 @@
 {
-  "db": {},
+  "db": { "uri": "", "user": "", "pass": "" },
   "jwt": { "expiresIn": 3600 },
   "server": { "port": 80 },
   "env": "production"
